@@ -4,17 +4,20 @@ Python script that demonstrates a simple encryption method using the Caesar ciph
 The Caesar cipher is a basic encryption technique where each letter in the text is 
 shifted by a fixed number of positions in the alphabet.
 
-How does this script work?
+How the Script Works
+Input Parameters:
+text: The string to be encrypted.
+shift: The number of positions each letter is shifted in the alphabet.
+Logic:
+The script iterates through each character in the input text.
+If the character is a letter (isalpha()), it calculates the new encrypted character by:
+Determining the base ASCII value (ord('A') for uppercase or ord('a') for lowercase).
+Shifting the character by the specified amount (shift) and wrapping around the alphabet 
+using modulo (% 26).
+Non-alphabetic characters (e.g., spaces, punctuation) are left unchanged.
+Output:
+The function returns the encrypted version of the input text.
+Example Output
+For the input text "Hello, Python World!" with a shift of 5, the output will be:
 
-The ord() and chr() functions:
-ord(char) returns the ASCII code of the given character.
-chr(code) converts the ASCII code back to char.
-Handling letters:
-The script checks if the character is a letter (isalpha()), and moves it accordingly in the alphabet.
-It supports both uppercase and lowercase letters.
-Other characters:
-Characters that are not letters (e.g. spaces, numbers, punctuation marks) are left unchanged.
-Output
-For the text "Welcome to the world of Python!" and an offset of 3, the output will be:
-
-Encrypted text: Zlwdm z vąflhflh Sbwkrqd!
+Encrypted text: Mjqqt, Udymts Btwqi!
